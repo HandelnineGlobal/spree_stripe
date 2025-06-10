@@ -7,11 +7,7 @@ end
 
 gem 'rails-controller-testing'
 
-spree_opts = if ENV['SPREE_PATH']
-                { 'path': ENV['SPREE_PATH'] }
-             else
-                { 'github': 'spree/spree', 'branch': 'main' }
-             end
+spree_opts = '~> 4.8.3'
 gem 'spree', spree_opts
 gem 'spree_admin', spree_opts
 gem 'spree_emails', spree_opts
