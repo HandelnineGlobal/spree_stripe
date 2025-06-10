@@ -20,9 +20,9 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree', '>= 5.0.0.alpha'
-  s.add_dependency 'spree_storefront', '>= 5.0.0.alpha'
-  s.add_dependency 'spree_admin', '>= 5.0.0.alpha'
+  s.add_dependency 'spree', '>= 4.8.3'
+  s.add_dependency 'spree_storefront', '>= 4.8.3'
+  s.add_dependency 'spree_admin', '>= 4.8.3'
   s.add_dependency 'spree_extension'
 
   s.add_dependency 'importmap-rails'
