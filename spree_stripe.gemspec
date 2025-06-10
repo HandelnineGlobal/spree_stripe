@@ -21,8 +21,8 @@ Gem::Specification.new do |s|
   s.requirements << 'none'
 
   s.add_dependency 'spree', '>= 4.8.3'
-  s.add_dependency 'spree_storefront', '>= 4.8.3'
-  # Commented out to avoid tinymce-rails conflict
+  # Commented out to avoid conflict
+  # s.add_dependency 'spree_storefront', '>= 4.8.3'
   # s.add_dependency 'spree_admin', '>= 4.8.2'
   s.add_dependency 'spree_extension'
 
