@@ -356,10 +356,6 @@ module SpreeStripe
     def register_domain
       stores.each do |store|
         RegisterDomainJob.perform_later(store.id, 'store')
-
-        store.custom_domains.each do |custom_domain|
-          RegisterDomainJob.perform_later(custom_domain.id, 'custom_domain')
-        end
       end
     end
   end

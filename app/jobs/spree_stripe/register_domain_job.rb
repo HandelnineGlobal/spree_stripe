@@ -9,12 +9,7 @@ module SpreeStripe
     private
 
     def klass
-      @klass ||= case @klass_type
-                 when 'store'
-                   Spree::Store
-                 when 'custom_domain'
-                   Spree::CustomDomain
-                 end
+      Spree::Store
     end
   end
 end

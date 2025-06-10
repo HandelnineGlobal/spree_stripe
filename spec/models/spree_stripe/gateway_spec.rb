@@ -12,16 +12,6 @@ RSpec.describe SpreeStripe::Gateway do
       expect { create_gateway }.to have_enqueued_job(SpreeStripe::RegisterDomainJob).once.with(store.id, 'store')
     end
 
-    context 'with custom domains' do
-      let!(:custom_domains) { create_list(:custom_domain, 3, store: store) }
-
-      it 'schedules jobs to register the Apple Pay store and custom domains' do
-        expect do
-          create_gateway
-        end.to have_enqueued_job(SpreeStripe::RegisterDomainJob).exactly(4).times
-      end
-    end
-
     context 'on update' do
       before { create_gateway }
 

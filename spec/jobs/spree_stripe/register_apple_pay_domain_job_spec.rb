@@ -19,15 +19,4 @@ RSpec.describe SpreeStripe::RegisterDomainJob do
       expect(register_domain_service).to have_received(:call).with(model: store)
     end
   end
-
-  context 'when the model is a custom domain' do
-    let(:model_id) { custom_domain.id }
-    let(:model_type) { 'custom_domain' }
-    let(:custom_domain) { create(:custom_domain) }
-
-    it 'calls SpreeStripe::RegisterDomain' do
-      subject
-      expect(register_domain_service).to have_received(:call).with(model: custom_domain)
-    end
-  end
 end
